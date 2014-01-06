@@ -1,0 +1,76 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
+    x:Class="AlmaEsami.PanoramaAfterLogin"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <Grid x:Name="LayoutRoot">
+        <phone:Panorama Title="Almaesami">
+
+            <phone:PanoramaItem Header="esami">
+                <ScrollViewer VerticalContentAlignment="Top" HorizontalContentAlignment="Left">
+                    <Grid x:Name="gridExams" />
+
+                </ScrollViewer>
+            </phone:PanoramaItem>
+
+            <phone:PanoramaItem Header="statistiche">
+                <ScrollViewer VerticalContentAlignment="Top" HorizontalContentAlignment="Left">
+                    <StackPanel x:Name="stackStats">
+                        <TextBlock x:Name="txtMediaPesata" Text="Media pesata: " />
+                        <TextBlock x:Name="txtMediaAritmetica" Text="Media aritmetica: " />
+                        <TextBlock x:Name="txtBaseLaurea" Text="Base laurea: " />
+                        <TextBlock x:Name="txtNumeroLodi" Text="Numero lodi: " />
+                        <TextBlock />
+                        <TextBlock x:Name="txtNumeroCrediti" Text="Numero crediti: " />
+                        <TextBlock x:Name="txtNumeroIdoneita" Text="Numero idoneità: " />
+                        <TextBlock x:Name="txtEsSostenuti" Text="Esami sostenuti: " />
+                        <TextBlock x:Name="txtEsDaSostenere" Text="Esami da sostenere: " />
+                        <TextBlock />
+                        <TextBlock x:Name="txtPositiviDaVerbalizzare" Text="Esiti positivi da verbalizzare: " />
+                        <TextBlock x:Name="txtNegativiDaVerbalizzare" Text="Esiti negativi da verbalizzare: " />
+                        <TextBlock x:Name="txtRespintiVerbalizzati" Text="Respinti verbalizzati: " />
+                    </StackPanel>
+                </ScrollViewer>
+            </phone:PanoramaItem>
+
+            <phone:PanoramaItem Header="informazioni">
+                <ScrollViewer VerticalContentAlignment="Top" HorizontalContentAlignment="Left">
+                    <StackPanel>
+                        <RichTextBox IsReadOnly="True">
+                            <Paragraph FontSize="18">
+                                Applicazione creata da:
+                                <LineBreak />
+                                <Hyperlink NavigateUri="http://mobile.nerdz.eu/nessuno." TargetName="_blank">Paolo Galeone [@ nerdz.eu]</Hyperlink>
+                                <LineBreak />
+                                <LineBreak />Versione: 1.0
+                                <LineBreak />
+                                <LineBreak />AlmaEsami, il nome ed il logo sono proprietà di:
+                                <LineBreak />
+                                <Hyperlink NavigateUri="http://www.unibo.it/" TargetName="_blank">ALMA MATER STUDIORUM - Università di Bologna</Hyperlink>
+                                <LineBreak />
+                                <LineBreak />
+                                <LineBreak />Per segnalazioni commentate nel marketplace oppure scrivete a
+                                <Hyperlink NavigateUri="mailto:nessuno@nerdz.eu" TargetName="_blank">nessuno@nerdz.eu</Hyperlink>!
+                                <LineBreak />
+                            </Paragraph>
+                        </RichTextBox>
+                        <UI:AdControl ApplicationId="a2a6ed5e-2a5c-4d40-a96f-7bff00648cd4" AdUnitId="138737" Height="50" Width="300" />
+                        <!-- <UI:AdControl ApplicationId="test_client" AdUnitId="Image300_50" Height="50"  Width="300" /> -->
+                    </StackPanel>
+                </ScrollViewer>
+            </phone:PanoramaItem>
+        </phone:Panorama>
+    </Grid>
+
+</phone:PhoneApplicationPage>
